@@ -26,9 +26,9 @@ export default function MusicCredits() {
             Music credits
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-cream/70">
-            lofirain uses sourced Creative Commons music and does not use
-            AI-generated music. Each track below includes its credited artist,
-            applicable license, and original source page.
+            lofirain uses sourced Creative Commons music. Each track below
+            includes its credited artist, applicable license, and original
+            source page.
           </p>
           <p className="mt-4 text-sm font-semibold text-cream/50">
             {tracks.length} tracks

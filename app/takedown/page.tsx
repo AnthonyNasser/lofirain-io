@@ -3,21 +3,21 @@ import { LegalPage } from "../legal";
 import { TakedownForm } from "./TakedownForm";
 
 export const metadata: Metadata = {
-  title: "Artist Takedown Request",
-  description: "Request review or removal of a song from lofirain.",
+  title: "Contact and Artist Takedown Request",
+  description: "Contact LofiRain LLC or request review or removal of a song.",
 };
 
 export default function TakedownPage() {
   return (
     <LegalPage
-      title="Artist takedown request"
-      updated="June 17, 2026"
-      intro="Artists, rights holders, and authorized representatives can request review or removal of a song from lofirain."
+      title="Contact LofiRain"
+      updated="June 27, 2026"
+      intro="Send a privacy or legal inquiry, or request review or removal of a song from lofirain."
     >
       <p>
-        Use this form to send a request. Include enough detail for the track to
-        be identified, including artist name, song title, and source page if you
-        know it.
+        Select the type of inquiry below. For a rights-holder request, include
+        enough detail to identify the track and explain your authority. For a
+        privacy request, identify the right you want to exercise.
       </p>
       <TakedownForm />
       <p>

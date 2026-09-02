@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import HomeNav from "./components/HomeNav";
 
 const features = [
   {
@@ -20,40 +20,7 @@ const features = [
 export default function Home() {
   return (
     <main className="site-shell overflow-hidden text-cream">
-      <RainField />
-      <nav className="site-nav relative z-20 mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 sm:px-8">
-        <Link
-          href="/"
-          className="flex items-center gap-3 font-rounded text-lg font-extrabold"
-        >
-          <Image
-            src="/brand/lofirain-logo.png"
-            alt=""
-            width={34}
-            height={34}
-            className="rounded-xl"
-            priority
-          />
-          lofirain
-        </Link>
-        <div className="flex items-center gap-6 text-sm font-semibold text-cream/60">
-          <Link href="/privacy" className="transition-colors hover:text-cream">
-            Privacy
-          </Link>
-          <Link href="/terms" className="transition-colors hover:text-cream">
-            Terms
-          </Link>
-          <Link
-            href="/music-credits"
-            className="transition-colors hover:text-cream"
-          >
-            Music credits
-          </Link>
-          <Link href="/takedown" className="transition-colors hover:text-cream">
-            Takedown
-          </Link>
-        </div>
-      </nav>
+      <HomeNav />
 
       <section className="relative z-10 mx-auto grid min-h-[calc(100svh-84px)] w-full max-w-6xl items-center gap-12 px-6 pb-16 pt-4 sm:px-8 lg:grid-cols-[0.96fr_1.04fr]">
         <div className="max-w-2xl">
@@ -61,15 +28,16 @@ export default function Home() {
             lofirain
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8 text-cream/70 sm:text-xl">
-            A quiet lofi player built around mood, ambient rain, and a little
-            cloud companion that stays with you while you work, study, or wind
-            down.
+            A quiet lofi player built around mood, ambient rain, and focused
+            sessions that stay simple while you work, study, or wind down.
           </p>
           <div className="hero-actions mt-9">
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/ambient-focus-timer-lofirain/id6774655093"
               className="app-store-button"
-              aria-label="Open App Store link"
+              aria-label="Download lofirain on the App Store"
+              target="_blank"
+              rel="noreferrer"
             >
               <svg
                 className="app-store-logo"
@@ -88,14 +56,10 @@ export default function Home() {
                 <span className="app-store-title">App Store</span>
               </span>
             </a>
-            <Link href="/takedown" className="secondary-button">
+            <Link href="/takedown" prefetch={false} className="secondary-button">
               Artist takedown request
             </Link>
           </div>
-          <p className="source-note">
-            The catalog uses sourced Creative Commons tracks. lofirain never
-            uses AI-generated music.
-          </p>
         </div>
 
         <div className="relative min-h-[620px]">
@@ -104,27 +68,29 @@ export default function Home() {
           <div className="phone phone-back">
             <Image
               src="/app-screens/playback.png"
-              alt="lofirain playback screen with a cloud companion and session controls"
+              alt="lofirain playback screen with session controls"
               width={430}
               height={932}
+              sizes="(min-width: 1024px) 286px, (min-width: 761px) min(52vw, 286px), min(56vw, 240px)"
               className="h-full w-full object-cover"
-              priority
+              loading="lazy"
             />
           </div>
           <div className="phone phone-front">
             <Image
               src="/app-screens/setup.png"
-              alt="lofirain mood setup screen with ambient and timer controls"
+              alt="lofirain mood setup screen with ambient controls"
               width={430}
               height={932}
+              sizes="(min-width: 1024px) 340px, (min-width: 761px) min(62vw, 340px), min(70vw, 300px)"
               className="h-full w-full object-cover"
-              priority
+              preload
             />
           </div>
         </div>
       </section>
 
-      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 sm:px-8">
+      <section className="deferred-section relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 sm:px-8">
         <p className="section-kicker">Why lofirain</p>
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
           {features.map((feature) => (
@@ -140,7 +106,7 @@ export default function Home() {
 
       <div className="section-divider" aria-hidden="true" />
 
-      <section className="relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:px-8 lg:grid-cols-[0.7fr_1fr]">
+      <section className="deferred-section relative z-10 mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:px-8 lg:grid-cols-[0.7fr_1fr]">
         <div>
           <p className="section-kicker">Track sources</p>
           <h2 className="mt-4 font-rounded text-3xl font-extrabold leading-tight text-cream sm:text-4xl">
@@ -151,11 +117,12 @@ export default function Home() {
           <p>
             The app catalog uses Creative Commons music from Free Stock Music
             and Purrple Cat track listings, with source pages and license names
-            stored in the app metadata. lofirain never uses AI-generated music.
+            stored in the app metadata.
           </p>
           <p>
             <Link
               href="/music-credits"
+              prefetch={false}
               className="font-bold text-cream underline decoration-cream/30 transition hover:decoration-cream"
             >
               View music credits and original sources
@@ -174,32 +141,22 @@ export default function Home() {
   );
 }
 
-function RainField() {
-  return (
-    <div aria-hidden="true" className="rain-field">
-      {Array.from({ length: 56 }, (_, index) => (
-        <span key={index} style={{ "--i": index } as CSSProperties} />
-      ))}
-    </div>
-  );
-}
-
 function Footer() {
   return (
     <footer className="relative z-10 border-t border-cream/10 px-6 py-8 text-sm text-cream/56 sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p>Copyright 2026 LofiRain LLC. All rights reserved.</p>
         <div className="flex gap-5">
-          <Link href="/privacy" className="hover:text-cream">
+          <Link href="/privacy" prefetch={false} className="hover:text-cream">
             Privacy
           </Link>
-          <Link href="/terms" className="hover:text-cream">
+          <Link href="/terms" prefetch={false} className="hover:text-cream">
             Terms
           </Link>
-          <Link href="/music-credits" className="hover:text-cream">
+          <Link href="/music-credits" prefetch={false} className="hover:text-cream">
             Music credits
           </Link>
-          <Link href="/takedown" className="hover:text-cream">
+          <Link href="/takedown" prefetch={false} className="hover:text-cream">
             Takedown
           </Link>
         </div>

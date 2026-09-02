@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 
 type FormValues = {
+  inquiryType: "takedown" | "privacy" | "terms" | "other";
   name: string;
   email: string;
   artistName: string;
@@ -14,6 +15,7 @@ type FormValues = {
 };
 
 const initialValues: FormValues = {
+  inquiryType: "takedown",
   name: "",
   email: "",
   artistName: "",
@@ -56,7 +58,7 @@ export function TakedownForm() {
 
       setValues(initialValues);
       setStatus("sent");
-      setStatusMessage("Request sent. We will review the details you provided.");
+      setStatusMessage("Message sent. We will review the details you provided.");
     } catch (error) {
       setStatus("error");
       setStatusMessage(
@@ -69,6 +71,25 @@ export function TakedownForm() {
 
   return (
     <form className="takedown-form" onSubmit={handleSubmit}>
+      <label>
+        What can we help with?
+        <select
+          required
+          value={values.inquiryType}
+          onChange={(event) =>
+            updateValue(
+              "inquiryType",
+              event.target.value as FormValues["inquiryType"],
+            )
+          }
+        >
+          <option value="takedown">Artist, rights-holder, or takedown request</option>
+          <option value="privacy">Privacy question or rights request</option>
+          <option value="terms">Terms or legal inquiry</option>
+          <option value="other">Other inquiry</option>
+        </select>
+      </label>
+
       <div className="field-grid">
         <label>
           Your legal name
@@ -91,57 +112,67 @@ export function TakedownForm() {
         </label>
       </div>
 
-      <div className="field-grid">
-        <label>
-          Artist name
-          <input
-            required
-            value={values.artistName}
-            onChange={(event) => updateValue("artistName", event.target.value)}
-          />
-        </label>
-        <label>
-          Song title
-          <input
-            required
-            value={values.trackTitle}
-            onChange={(event) => updateValue("trackTitle", event.target.value)}
-          />
-        </label>
-      </div>
+      {values.inquiryType === "takedown" && (
+        <>
+          <div className="field-grid">
+            <label>
+              Artist name
+              <input
+                required
+                value={values.artistName}
+                onChange={(event) => updateValue("artistName", event.target.value)}
+              />
+            </label>
+            <label>
+              Song title
+              <input
+                required
+                value={values.trackTitle}
+                onChange={(event) => updateValue("trackTitle", event.target.value)}
+              />
+            </label>
+          </div>
+
+          <label>
+            Source page or track link, if known
+            <input
+              value={values.sourceUrl}
+              onChange={(event) => updateValue("sourceUrl", event.target.value)}
+              inputMode="url"
+            />
+          </label>
+
+          <label>
+            Your relationship to the work
+            <select
+              required
+              value={values.relationship}
+              onChange={(event) => updateValue("relationship", event.target.value)}
+            >
+              <option value="">Select one</option>
+              <option value="Artist">Artist</option>
+              <option value="Rights holder">Rights holder</option>
+              <option value="Authorized representative">
+                Authorized representative
+              </option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+        </>
+      )}
 
       <label>
-        Source page or track link, if known
-        <input
-          value={values.sourceUrl}
-          onChange={(event) => updateValue("sourceUrl", event.target.value)}
-          inputMode="url"
-        />
-      </label>
-
-      <label>
-        Your relationship to the work
-        <select
-          required
-          value={values.relationship}
-          onChange={(event) => updateValue("relationship", event.target.value)}
-        >
-          <option value="">Select one</option>
-          <option value="Artist">Artist</option>
-          <option value="Rights holder">Rights holder</option>
-          <option value="Authorized representative">Authorized representative</option>
-          <option value="Other">Other</option>
-        </select>
-      </label>
-
-      <label>
-        Request details
+        {values.inquiryType === "takedown" ? "Request details" : "Message"}
         <textarea
           required
           rows={7}
           value={values.details}
           onChange={(event) => updateValue("details", event.target.value)}
-          placeholder="Tell us which track should be reviewed or removed and why."
+          placeholder={
+            values.inquiryType === "takedown"
+              ? "Tell us which track should be reviewed or removed and why."
+              : "Describe your question or request. For a privacy request, identify the right you want to exercise."
+          }
         />
       </label>
 
@@ -153,13 +184,13 @@ export function TakedownForm() {
           onChange={(event) => updateValue("confirm", event.target.checked)}
         />
         <span>
-          I confirm that the information in this request is accurate to the best
-          of my knowledge.
+          I confirm that the information in this message is accurate to the best
+          of my knowledge and that I am authorized to submit it.
         </span>
       </label>
 
       <button type="submit" disabled={status === "submitting"}>
-        {status === "submitting" ? "Sending request..." : "Send request"}
+        {status === "submitting" ? "Sending..." : "Send message"}
       </button>
       <p
         className={`form-note form-status ${status === "error" ? "error" : ""} ${
@@ -167,7 +198,7 @@ export function TakedownForm() {
         }`}
         aria-live="polite"
       >
-        {statusMessage || "Your request will be sent privately for review."}
+        {statusMessage || "Your message will be sent privately for review."}
       </p>
     </form>
   );

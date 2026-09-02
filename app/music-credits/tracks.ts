@@ -117,8 +117,6 @@ export const tracks: readonly MusicCredit[] = [
   ["Exist", "FSM Team & < e s c p >", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.free-stock-music.com/fsm-team-escp-exist.html"],
   ["EVENING NIGHTS", "Mehul ShaRma", "Creative Commons / Attribution 3.0 Unported License (CC BY 3.0)", "https://www.free-stock-music.com/mehul-sharma-evening-nights.html"],
   ["XII", "Nihility Stuffs", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://soundcloud.com/nihilitystuffs-lab/xii-lofi-type-beat-free"],
-  ["Wibbbly", "Shane Ivers", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.silvermansound.com/free-music/wibbbly"],
-  ["Chasing Tales", "Shane Ivers", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.silvermansound.com/free-music/chasing-tales"],
   ["Entwined - 4AM", "Mr Hexadus", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.soundclick.com/track/15066946/mr-hexadus/entwined-4am"],
   ["Distant Memories", "Catalin Chirila", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://opentunes.io/music/distant-memories"],
   ["Sunlit Saturdays", "FSM Team & < e s c p >", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.free-stock-music.com/fsm-team-escp-sunlit-saturdays.html"],
@@ -126,7 +124,4 @@ export const tracks: readonly MusicCredit[] = [
   ["Hometown Rain", "FSM Team & < e s c p >", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.free-stock-music.com/fsm-team-escp-hometown-rain.html"],
   ["Wonderland", "Purrple Cat", "Creative Commons / Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)", "https://www.free-stock-music.com/purrple-cat-wonderland.html"],
   ["Komorebi", "FSM Team & < e s c p >", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.free-stock-music.com/fsm-team-escp-komorebi.html"],
-  ["Lazy Daze", "Shane Ivers", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.silvermansound.com/free-music/lazy-daze"],
-  ["Saturated Drops", "Shane Ivers", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.silvermansound.com/free-music/saturated-drops"],
-  ["Diaphanous", "Shane Ivers", "Creative Commons / Attribution 4.0 International (CC BY 4.0)", "https://www.silvermansound.com/free-music/diaphanous"],
 ] as const;

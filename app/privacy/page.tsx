@@ -10,62 +10,236 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      updated="June 17, 2026"
-      intro="This Privacy Policy explains how lofirain handles information when you use the app or this website."
+      updated="June 27, 2026"
+      intro="This Privacy Policy explains how LofiRain LLC collects, uses, discloses, and retains information when you use the lofirain app, lofirain.io, or contact us."
     >
-      <h2>Overview</h2>
+      <h2>1. Scope and responsible company</h2>
       <p>
-        lofirain is designed as a simple listening app. The app does not require
-        an account, and we do not use the app to sell personal information.
+        LofiRain LLC (“LofiRain,” “we,” “us,” or “our”) is responsible for the
+        practices described in this Policy. This Policy applies to the lofirain
+        mobile application, lofirain.io, and requests you submit to us
+        (collectively, the “Service”). It does not govern third-party services
+        that have their own privacy policies, including Apple and websites
+        linked from our music credits.
       </p>
 
-      <h2>Information you provide</h2>
+      <h2>2. Information we collect</h2>
+      <p>We collect the following limited categories of information:</p>
+      <ul>
+        <li>
+          <strong>Information you submit.</strong> If you contact us or submit a
+          rights-holder request, we receive the information you provide, such
+          as your name, email address, artist or organization, relationship to
+          a work, track and source details, and message contents.
+        </li>
+        <li>
+          <strong>Website technical data.</strong> Our hosting and security
+          providers may automatically process IP address, browser and device
+          type, operating system, requested URL, referring URL, timestamps, and
+          similar request or diagnostic information needed to deliver, secure,
+          and troubleshoot the website.
+        </li>
+        <li>
+          <strong>On-device app data.</strong> The app may store preferences and
+          operational data on your device, such as selected mood, timer,
+          ambient sound, playback settings, and downloaded or cached audio.
+          This supports app functions and is not an account profile.
+        </li>
+        <li>
+          <strong>Information from service providers.</strong> We may receive
+          delivery status and basic diagnostic information from providers that
+          host the website or deliver messages. Apple may provide app download,
+          performance, or crash information according to your device settings
+          and Apple’s policies. We do not receive your Apple ID password or
+          full payment-card details.
+        </li>
+      </ul>
       <p>
-        If you contact us by email or submit an artist takedown request, we
-        receive the information you choose to provide, such as your name, email
-        address, track details, and the contents of your message.
+        lofirain does not require an account. We do not intentionally collect
+        precise location, contacts, photos, microphone recordings, health data,
+        biometric data, government identifiers, or financial-account details
+        through the current version of the Service.
       </p>
 
-      <h2>App data</h2>
+      <h2>3. How we use information</h2>
+      <p>We use information only as reasonably necessary to:</p>
+      <ul>
+        <li>provide, operate, maintain, and secure the Service;</li>
+        <li>save app settings and provide requested playback functions;</li>
+        <li>
+          receive, verify, investigate, and respond to support, privacy,
+          copyright, and other rights-holder requests;
+        </li>
+        <li>detect, prevent, and troubleshoot misuse, fraud, and security issues;</li>
+        <li>comply with law and enforce our agreements; and</li>
+        <li>
+          create aggregated or de-identified information that cannot reasonably
+          be linked to you.
+        </li>
+      </ul>
+
+      <h2>4. How we disclose information</h2>
+      <p>We may disclose information in these limited circumstances:</p>
+      <ul>
+        <li>
+          <strong>Service providers.</strong> Vendors may process information on
+          our behalf to provide hosting, security, email delivery, and related
+          infrastructure. These currently include Vercel for website hosting
+          and Resend for delivery of submitted requests.
+        </li>
+        <li>
+          <strong>Legal and safety reasons.</strong> We may disclose information
+          when we reasonably believe disclosure is required by law, legal
+          process, or a valid government request, or is necessary to protect
+          rights, safety, security, or prevent fraud or abuse.
+        </li>
+        <li>
+          <strong>Business transfers.</strong> Information may be disclosed as
+          part of due diligence or transferred in connection with a merger,
+          financing, acquisition, reorganization, bankruptcy, or sale of all or
+          part of our business, subject to applicable law.
+        </li>
+        <li>
+          <strong>At your direction.</strong> We may disclose information when
+          you direct us or give consent.
+        </li>
+      </ul>
       <p>
-        lofirain may store preferences on your device, including selected mood,
-        timer, ambient sound, and playback settings. These preferences are used
-        to run the app experience and are not an account profile.
+        We do not sell personal information for money. We do not share personal
+        information for cross-context behavioral advertising, use it for
+        targeted advertising, or knowingly disclose it to data brokers. We do
+        not offer financial incentives for personal information.
       </p>
 
-      <h2>Downloads and audio</h2>
+      <h2>5. Cookies, analytics, and tracking choices</h2>
       <p>
-        Some tracks may be downloaded or cached by the app so they can be played
-        locally. Track metadata may include title, artist, source page, and
-        license information.
+        We do not currently use advertising cookies or third-party advertising
+        analytics on lofirain.io. Our infrastructure providers may use
+        essential technologies or server logs to deliver, secure, and diagnose
+        the website. Browser “Do Not Track” signals are not standardized; the
+        website does not respond differently to them because we do not
+        currently track visitors across unaffiliated websites. Because we do
+        not sell or share personal information for cross-context behavioral
+        advertising, a Global Privacy Control signal does not change the
+        current experience. We will honor legally recognized opt-out signals if
+        our practices change in a way that makes them applicable.
       </p>
 
-      <h2>Website</h2>
+      <h2>6. Retention</h2>
       <p>
-        This website provides information about lofirain and legal/contact
-        pages. Hosting providers may process standard technical information such
-        as IP address, browser type, requested page, and timestamp to deliver and
-        secure the site.
+        We retain personal information only for as long as reasonably necessary
+        for the purposes described above, including to respond to requests,
+        keep appropriate records of rights-holder matters, maintain security,
+        resolve disputes, enforce agreements, and satisfy legal obligations.
+        Retention periods depend on the information and context. Service
+        providers retain technical logs under their own documented schedules.
+        On-device preferences and cached audio generally remain until you
+        change settings, clear app data, or delete the app, subject to device
+        backup behavior controlled by you or your platform provider.
       </p>
 
-      <h2>Sharing</h2>
+      <h2>7. Security</h2>
       <p>
-        We may share information when needed to operate the app or website,
-        respond to requests, comply with law, protect rights and safety, or work
-        with service providers acting on our behalf.
+        We use reasonable administrative, technical, and organizational
+        safeguards appropriate to the nature of the information we process.
+        However, no method of transmission, storage, or security is completely
+        reliable. We cannot guarantee absolute security, and you should not
+        submit information that is unnecessary for your request.
       </p>
 
-      <h2>Children</h2>
+      <h2>8. Your privacy choices and rights</h2>
       <p>
-        lofirain is not directed to children under 13. If you believe a child
-        provided personal information, contact us so we can review and delete it
-        where appropriate.
+        Depending on where you live and subject to legal exceptions, you may
+        have rights to request access to, correction of, or deletion of your
+        personal information; obtain a portable copy; restrict or object to
+        certain processing; withdraw consent; or appeal a denied request. You
+        may also have the right not to receive discriminatory treatment for
+        exercising a privacy right.
+      </p>
+      <p>
+        To make a request, use our <a href="/takedown">contact form</a> and state
+        that the message is a privacy request. Describe the right you wish to
+        exercise. We may ask for information reasonably necessary to verify
+        your identity and authority. An authorized agent may submit a request
+        where permitted by law, but we may require proof of authorization and
+        direct verification from you. We will respond within the time required
+        by applicable law. You may update or remove on-device app data using
+        app or device controls or by deleting the app.
       </p>
 
-      <h2>Contact</h2>
+      <h2>9. California disclosures</h2>
       <p>
-        For privacy questions, use the contact form on the takedown request
-        page and note that your message is about privacy.
+        In the preceding 12 months, the categories of personal information we
+        may have collected are identifiers (such as name, email address, and IP
+        address), internet or other electronic network activity, and the
+        contents of communications you send us. We collect these categories
+        from you, your device or browser, and our service providers. We use and
+        disclose them for the business purposes described in Sections 3 and 4.
+        We do not use or disclose sensitive personal information for purposes
+        that require a right to limit under California law.
+      </p>
+      <p>
+        We have not sold personal information or shared it for cross-context
+        behavioral advertising in the preceding 12 months, including personal
+        information of consumers we know are under 16. If the California
+        Consumer Privacy Act applies to our processing, California residents
+        may exercise the rights to know, access, correct, delete, and obtain
+        information about collection and disclosure, as well as opt out of sale
+        or sharing and limit certain uses of sensitive information. Because we
+        do not currently sell or share personal information as those terms are
+        defined by that law, we do not display a “Do Not Sell or Share” link.
+      </p>
+
+      <h2>10. European Economic Area, United Kingdom, and Switzerland</h2>
+      <p>
+        If data-protection law in the European Economic Area, United Kingdom,
+        or Switzerland applies, LofiRain LLC is the controller of personal
+        information described in this Policy. We process information as needed
+        to provide the Service and respond to your requests; for our legitimate
+        interests in securing, maintaining, and improving the Service and
+        protecting legal rights; to comply with legal obligations; and with
+        consent where required. You may object to processing based on legitimate
+        interests, request restriction or portability, withdraw consent without
+        affecting earlier processing, and lodge a complaint with your local
+        data-protection authority. Information transferred outside your country
+        will be handled using a lawful transfer mechanism where one is required.
+      </p>
+
+      <h2>11. Children’s privacy</h2>
+      <p>
+        The Service is not directed to children under 13, and we do not
+        knowingly collect personal information from children under 13. A child
+        under 13 should not submit a contact or takedown request. If you believe
+        a child has provided personal information, contact us so we can review
+        and delete it as required. If we learn that we collected covered
+        information from a child without legally sufficient consent, we will
+        take reasonable steps to delete it.
+      </p>
+
+      <h2>12. International use</h2>
+      <p>
+        LofiRain LLC is based in the United States. If you use the Service from
+        another country, information processed through the website or contact
+        process may be transferred to and processed in the United States and
+        other countries where our providers operate. Those countries may have
+        different data-protection laws. We use legally required safeguards when
+        applicable.
+      </p>
+
+      <h2>13. Changes to this Policy</h2>
+      <p>
+        We may update this Policy as the Service, our practices, or applicable
+        law changes. We will post the revised Policy and update the date above.
+        If a change materially expands how we use previously collected personal
+        information, we will provide additional notice and obtain consent when
+        required by law. We encourage you to review this page periodically.
+      </p>
+
+      <h2>14. Contact</h2>
+      <p>
+        For privacy questions, complaints, or rights requests, use our{" "}
+        <a href="/takedown">contact form</a> and state clearly that your message
+        concerns privacy rather than a music takedown request.
       </p>
     </LegalPage>
   );

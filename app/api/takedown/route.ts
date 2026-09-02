@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 type TakedownRequest = {
+  inquiryType?: string;
   name?: string;
   email?: string;
   artistName?: string;
@@ -11,14 +12,7 @@ type TakedownRequest = {
   confirm?: boolean;
 };
 
-const requiredFields: Array<keyof TakedownRequest> = [
-  "name",
-  "email",
-  "artistName",
-  "trackTitle",
-  "relationship",
-  "details",
-];
+const inquiryTypes = new Set(["takedown", "privacy", "terms", "other"]);
 
 function clean(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -37,8 +31,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
+  const inquiryType = clean(payload.inquiryType) || "takedown";
+  const commonFields: Array<keyof TakedownRequest> = ["name", "email", "details"];
+  const takedownFields: Array<keyof TakedownRequest> = [
+    "artistName",
+    "trackTitle",
+    "relationship",
+  ];
+  const requiredFields =
+    inquiryType === "takedown"
+      ? [...commonFields, ...takedownFields]
+      : commonFields;
   const missingField = requiredFields.find((field) => !clean(payload[field]));
-  if (missingField || !payload.confirm) {
+
+  if (!inquiryTypes.has(inquiryType) || missingField || !payload.confirm) {
     return NextResponse.json(
       { error: "Please complete all required fields." },
       { status: 400 },
@@ -64,16 +70,30 @@ export async function POST(request: Request) {
     );
   }
 
-  const subject = `lofirain takedown request: ${clean(payload.trackTitle)}`;
+  const inquiryLabels: Record<string, string> = {
+    takedown: "Rights-holder or takedown request",
+    privacy: "Privacy request",
+    terms: "Terms or legal inquiry",
+    other: "General inquiry",
+  };
+  const subject =
+    inquiryType === "takedown"
+      ? `lofirain takedown request: ${clean(payload.trackTitle)}`
+      : `lofirain ${inquiryLabels[inquiryType].toLowerCase()}`;
   const body = [
+    `Inquiry type: ${inquiryLabels[inquiryType]}`,
     `Name: ${clean(payload.name)}`,
     `Email: ${senderEmail}`,
-    `Artist name: ${clean(payload.artistName)}`,
-    `Track title: ${clean(payload.trackTitle)}`,
-    `Source/link: ${clean(payload.sourceUrl) || "Not provided"}`,
-    `Relationship to work: ${clean(payload.relationship)}`,
+    ...(inquiryType === "takedown"
+      ? [
+          `Artist name: ${clean(payload.artistName)}`,
+          `Track title: ${clean(payload.trackTitle)}`,
+          `Source/link: ${clean(payload.sourceUrl) || "Not provided"}`,
+          `Relationship to work: ${clean(payload.relationship)}`,
+        ]
+      : []),
     "",
-    "Request details:",
+    "Message:",
     clean(payload.details),
   ].join("\n");
 
