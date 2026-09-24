@@ -1,77 +1,79 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { tracks } from "./tracks";
+import { LegalHomeLink } from "../legal";
+import { retiredTracks, tracks, type MusicCredit } from "./tracks";
 
 export const metadata: Metadata = {
   title: "Music credits",
   description:
-    "Artist attribution, Creative Commons licenses, and original source pages for music available in lofirain.",
+    "Artist attribution, Creative Commons licenses, and original source pages for the licensed music in Lofi Rain.",
   alternates: { canonical: "https://lofirain.io/music-credits" },
 };
 
 export default function MusicCredits() {
   return (
-    <main className="legal-shell min-h-screen text-cream">
-      <div className="mx-auto w-full max-w-5xl px-6 py-8 sm:px-8 sm:py-10">
-        <Link
-          href="/"
-          className="text-sm font-bold text-cream/60 transition hover:text-cream"
-        >
-          lofirain
-        </Link>
+    <main className="legal-shell">
+      <div className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-8 sm:py-8">
+        <LegalHomeLink />
 
-        <header className="mt-16 border-b border-cream/12 pb-8">
-          <p className="section-kicker">Attribution and licensing</p>
-          <h1 className="mt-4 font-rounded text-4xl font-black text-cream sm:text-5xl">
-            Music credits
-          </h1>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-cream/70">
-            lofirain uses sourced Creative Commons music. Each track below
-            includes its credited artist, applicable license, and original
-            source page.
+        <header className="mt-14 border-b border-ink/15 pb-8">
+          <h1 className="section-title">Music credits</h1>
+          <p className="lede mt-5">
+            Purrple Cat’s playlist in Lofi Rain is Creative Commons music. Each
+            track below lists its credited artist, license, and original source
+            page. The other clouds play original music made for Lofi Rain.
           </p>
-          <p className="mt-4 text-sm font-semibold text-cream/50">
-            {tracks.length} tracks
-          </p>
+          <p className="legal-meta mt-4">{tracks.length} tracks</p>
         </header>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
-          {tracks.map(([title, artist, license, source]) => (
-            <article
-              key={source}
-              className="rounded-2xl border border-cream/10 bg-cream/[0.04] p-5"
-            >
-              <h2 className="font-rounded text-lg font-extrabold text-cream">
-                {title}
-              </h2>
-              <p className="mt-1 font-semibold text-cream/65">{artist}</p>
-              <p className="mt-3 text-sm leading-6 text-cream/50">{license}</p>
-              <a
-                href={source}
-                rel="noreferrer"
-                target="_blank"
-                className="mt-4 inline-block text-sm font-bold text-cream underline decoration-cream/30 transition hover:decoration-cream"
-              >
-                Original source
-              </a>
-            </article>
-          ))}
-        </div>
+        <CreditList credits={tracks} />
 
-        <div className="mt-12 border-t border-cream/10 pt-8 text-sm leading-6 text-cream/56">
+        <section className="mt-16" aria-labelledby="retired-title">
+          <h2
+            id="retired-title"
+            className="text-2xl font-extrabold tracking-tight"
+          >
+            Previously in Lofi Rain
+          </h2>
+          <p className="mt-3 max-w-2xl text-ink/70">
+            These tracks were in earlier versions of the app.
+          </p>
+          <CreditList credits={retiredTracks} />
+        </section>
+
+        <div className="mt-12 border-t border-ink/15 pt-8 pb-16 text-ink/70">
           <p>
-            If you are an artist or rights holder and want a track reviewed or
-            removed, submit an {" "}
-            <Link
-              href="/takedown"
-              className="font-bold text-cream underline decoration-cream/30"
-            >
-              artist takedown request
+            If you’re an artist or rights holder and want a track reviewed or
+            removed,{" "}
+            <Link href="/takedown" className="text-link">
+              request a takedown
             </Link>
             .
           </p>
         </div>
       </div>
     </main>
+  );
+}
+
+function CreditList({ credits }: { credits: readonly MusicCredit[] }) {
+  return (
+    <div className="mt-8 grid gap-3 sm:grid-cols-2">
+      {credits.map(([title, artist, license, source]) => (
+        <article key={source} className="credit-card">
+          <h3 className="text-lg font-extrabold tracking-tight">{title}</h3>
+          <p className="mt-1 font-semibold text-ink/75">{artist}</p>
+          <p className="mt-3 text-sm leading-6 text-ink/60">{license}</p>
+          <a
+            href={source}
+            rel="noreferrer"
+            target="_blank"
+            className="text-link mt-4 inline-block text-sm"
+          >
+            Original source
+          </a>
+        </article>
+      ))}
+    </div>
   );
 }

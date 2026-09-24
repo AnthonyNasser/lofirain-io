@@ -3,52 +3,47 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { APP_STORE_URL } from "../appStore";
 
 const links = [
+  { href: "/music-credits", label: "Music credits" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
-  { href: "/music-credits", label: "Music credits" },
-  { href: "/takedown", label: "Takedown" },
+  { href: "/takedown", label: "Contact" },
 ];
 
 export default function HomeNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="site-nav relative z-20 mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 sm:px-8">
-      <Link
-        href="/"
-        className="flex items-center gap-3 font-rounded text-lg font-extrabold"
-      >
-        <Image
-          src="/brand/lofirain-logo.png"
-          alt=""
-          width={34}
-          height={34}
-          className="rounded-xl"
-        />
-        lofirain
+    <nav className="site-nav" aria-label="Main">
+      <Link href="/" className="wordmark">
+        <Image src="/brand/lofi-rain-icon.png" alt="" width={34} height={34} />
+        Lofi Rain
       </Link>
 
-      <div className="hidden items-center gap-6 text-sm font-semibold text-cream/60 sm:flex">
+      <div className="nav-links">
         {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            prefetch={false}
-            className="transition-colors hover:text-cream"
-          >
+          <Link key={link.href} href={link.href} prefetch={false}>
             {link.label}
           </Link>
         ))}
+        <a
+          className="nav-get"
+          href={APP_STORE_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Get the app
+        </a>
       </div>
 
       <button
         type="button"
-        className="mobile-menu-button sm:hidden"
+        className="mobile-menu-button md:hidden"
         aria-expanded={isOpen}
         aria-controls="home-mobile-menu"
-        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
         onClick={() => setIsOpen((open) => !open)}
       >
         <span />
@@ -57,7 +52,15 @@ export default function HomeNav() {
       </button>
 
       {isOpen && (
-        <div id="home-mobile-menu" className="mobile-menu sm:hidden">
+        <div id="home-mobile-menu" className="mobile-menu md:hidden">
+          <a
+            className="mobile-menu-link"
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Get the app
+          </a>
           {links.map((link) => (
             <Link
               key={link.href}

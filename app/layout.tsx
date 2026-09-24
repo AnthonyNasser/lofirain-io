@@ -1,27 +1,26 @@
-import type { Metadata } from "next";
-import { Nunito, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({
+const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-rounded",
-  weight: ["400", "600", "700", "800", "900"],
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-figtree",
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "lofirain",
-    template: "%s | lofirain",
+    default: "Lofi Rain",
+    template: "%s | Lofi Rain",
   },
   description:
-    "A cozy iOS lofi player for rain, ambient sound, and focused listening sessions.",
+    "Lofi music with a cloud for company. Pick a companion, add rain, set a timer, and focus.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#efe8fc",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -30,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${nunito.variable} ${inter.variable}`}>
+    <html lang="en" className={`h-full antialiased ${figtree.variable}`}>
       <body className="min-h-full">{children}</body>
     </html>
   );

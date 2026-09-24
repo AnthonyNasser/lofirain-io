@@ -3,7 +3,7 @@ import { LegalPage } from "../legal";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of service for lofirain.",
+  description: "Terms of service for Lofi Rain.",
 };
 
 export default function TermsPage() {
@@ -11,11 +11,11 @@ export default function TermsPage() {
     <LegalPage
       title="Terms of Service"
       updated="June 27, 2026"
-      intro="These Terms are a binding agreement between you and LofiRain LLC governing your use of the lofirain app, lofirain.io, and related services."
+      intro="These Terms are a binding agreement between you and LofiRain LLC governing your use of the Lofi Rain app, lofirain.io, and related services."
     >
       <h2>1. Acceptance and eligibility</h2>
       <p>
-        By downloading, accessing, or using lofirain (the “Service”), you agree
+        By downloading, accessing, or using Lofi Rain (the “Service”), you agree
         to these Terms and our <a href="/privacy">Privacy Policy</a>. If you do
         not agree, do not use the Service. If you use the Service on behalf of
         an organization, you represent that you have authority to bind it.
@@ -29,7 +29,7 @@ export default function TermsPage() {
 
       <h2>2. App Store terms</h2>
       <p>
-        If you obtain lofirain through Apple’s App Store, Apple’s Licensed
+        If you obtain Lofi Rain through Apple’s App Store, Apple’s Licensed
         Application End User License Agreement (the “Standard EULA”) applies to
         your use of the app, and these Terms supplement it. If these Terms
         conflict with the Standard EULA or mandatory App Store usage rules, the
@@ -139,7 +139,7 @@ export default function TermsPage() {
 
       <h2>10. No professional advice or guaranteed results</h2>
       <p>
-        lofirain is an entertainment and productivity tool. It does not provide
+        Lofi Rain is an entertainment and productivity tool. It does not provide
         medical, mental-health, therapeutic, or other professional advice, and
         it is not an emergency service. We do not guarantee focus, sleep,
         relaxation, productivity, or any other outcome. Do not use the Service
