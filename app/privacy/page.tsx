@@ -73,10 +73,18 @@ export default function PrivacyPage() {
           linked to your account. Events never include text you type.
         </li>
         <li>
-          <strong>Subscription status.</strong> Premium is sold through Apple’s
-          App Store. Apple processes your payment, and we receive whether your
-          subscription is active and which plan you chose. We never receive your
-          payment-card details.
+          <strong>Subscription and purchase information.</strong> Premium is
+          sold through Apple’s App Store, and Apple processes your payment. The
+          app checks your subscription with Apple on your device. We receive
+          which plan you chose, whether a purchase or restore was started,
+          completed, cancelled, or failed, and whether Premium is active. We do
+          not receive your name, Apple Account password, billing address, or
+          payment-card details from Apple.
+        </li>
+        <li>
+          <strong>Reminders.</strong> If you turn on reminders, the app
+          schedules them on your device. We record only whether you allowed
+          notifications.
         </li>
         <li>
           <strong>Information from service providers.</strong> We may receive

@@ -10,15 +10,17 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms of Service"
-      updated="June 27, 2026"
+      updated="September 24, 2026"
       intro="These Terms are a binding agreement between you and LofiRain LLC governing your use of the Lofi Rain app, lofirain.io, and related services."
     >
       <h2>1. Acceptance and eligibility</h2>
       <p>
-        By downloading, accessing, or using Lofi Rain (the “Service”), you agree
-        to these Terms and our <a href="/privacy">Privacy Policy</a>. If you do
-        not agree, do not use the Service. If you use the Service on behalf of
-        an organization, you represent that you have authority to bind it.
+        By downloading, accessing, or using Lofi Rain (the “Service”), or by
+        tapping a button in the app next to a notice that refers to these Terms,
+        you agree to these Terms and acknowledge our{" "}
+        <a href="/privacy">Privacy Policy</a>. If you do not agree, do not use
+        the Service. If you use the Service on behalf of an organization, you
+        represent that you have authority to bind it.
       </p>
       <p>
         You must be legally capable of entering into this agreement. If you are
@@ -48,7 +50,91 @@ export default function TermsPage() {
         reserved.
       </p>
 
-      <h2>4. Acceptable use</h2>
+      <h2>4. Accounts</h2>
+      <p>
+        You can use Lofi Rain without an account. If you create one, you agree
+        to give accurate information, keep your sign-in credentials secure, and
+        tell us through our <a href="/takedown">contact form</a> if you believe
+        your account has been used without your permission. You are responsible
+        for activity under your account. You can deactivate your account in the
+        app’s Settings. Deactivation is permanent and does not cancel a Premium
+        subscription, which is managed by Apple as described below.
+      </p>
+
+      <h2>5. Premium subscriptions</h2>
+      <p>
+        Lofi Rain Premium is an optional, auto-renewing subscription sold
+        through Apple’s App Store. Premium unlocks every companion, visualizer,
+        and background in the app at once, including content that is only
+        available with Premium, such as Purrple Cat. The core app remains usable
+        without Premium.
+      </p>
+      <ul>
+        <li>
+          <strong>Price and billing.</strong> The price, currency, and billing
+          period (monthly or yearly) are shown in the app before you confirm a
+          purchase. Payment is charged to your Apple Account when you confirm
+          the purchase. Prices may include or be subject to applicable taxes.
+        </li>
+        <li>
+          <strong>Automatic renewal.</strong> Your subscription renews
+          automatically at the end of each billing period, at the then-current
+          price for the same period, unless you cancel at least 24 hours before
+          the current period ends. Your Apple Account is charged for renewal
+          within the 24 hours before the current period ends.
+        </li>
+        <li>
+          <strong>Free trials.</strong> If a free trial is offered, its length
+          is shown before you start it. Eligibility is determined by Apple and
+          is generally limited to one trial per person. Unless you cancel at
+          least 24 hours before the trial ends, it converts automatically to a
+          paid subscription and your Apple Account is charged the price shown
+          when you started the trial. Any unused part of a trial ends if you buy
+          a subscription during it.
+        </li>
+        <li>
+          <strong>How to cancel.</strong> You can cancel or change your
+          subscription at any time in your device’s Settings under your Apple
+          Account, then Subscriptions, or in the App Store. Cancellation takes
+          effect at the end of the current billing period, and you keep Premium
+          until then. Deleting the app, signing out, or deactivating your Lofi
+          Rain account does not cancel your subscription.
+        </li>
+        <li>
+          <strong>Refunds.</strong> Apple processes all payments, and refund
+          requests are handled by Apple under its policies, for example through
+          reportaproblem.apple.com. We cannot issue refunds directly. Except
+          where required by law or Apple’s policies, payments are non-refundable
+          and we do not provide refunds or credits for partial billing periods.
+        </li>
+        <li>
+          <strong>Price changes.</strong> We may change subscription prices.
+          Apple will notify you in advance of a price increase as its rules
+          require, and where Apple or applicable law requires your consent, the
+          new price will not apply until you agree to it. If you do not agree,
+          you can cancel before the new price takes effect.
+        </li>
+        <li>
+          <strong>When Premium ends.</strong> If your subscription ends, lapses,
+          or is refunded, content that is only available through Premium is no
+          longer available to you. Companions, visualizers, and backgrounds you
+          earned by listening stay unlocked.
+        </li>
+        <li>
+          <strong>Restoring purchases.</strong> You can restore an active
+          subscription on another device signed in to the same Apple Account
+          using Restore in the app. Premium is not available through Family
+          Sharing.
+        </li>
+        <li>
+          <strong>Changes to Premium.</strong> Premium content can change over
+          time as we add, update, or remove companions, visualizers,
+          backgrounds, or music. We do not promise that any particular item will
+          remain available for the length of your subscription.
+        </li>
+      </ul>
+
+      <h2>6. Acceptable use</h2>
       <p>You may not, and may not help anyone else to:</p>
       <ul>
         <li>use the Service in violation of law or another person’s rights;</li>
@@ -76,13 +162,14 @@ export default function TermsPage() {
         </li>
       </ul>
 
-      <h2>5. Music and third-party rights</h2>
+      <h2>7. Music and third-party rights</h2>
       <p>
-        The catalog includes music obtained from third-party source listings,
-        including Free Stock Music and Purrple Cat, and may include works made
-        available under Creative Commons licenses such as CC BY 3.0 and CC
-        BY-SA 3.0. The applicable source and license details are identified in
-        the app metadata and on our <a href="/music-credits">music credits</a>
+        The catalog includes original music created for the Service and music
+        obtained from third-party source listings, including Free Stock Music
+        and Purrple Cat, which may be made available under Creative Commons
+        licenses such as CC BY 3.0 and CC BY-SA 3.0. The applicable source and
+        license details are identified in the app metadata and on our{" "}
+        <a href="/music-credits">music credits</a>
         page. Those third-party licenses, not these Terms, govern rights granted
         directly by a rights holder in a particular track.
       </p>
@@ -91,11 +178,11 @@ export default function TermsPage() {
         Inclusion in the Service does not transfer ownership to LofiRain LLC or
         to you. You are responsible for reviewing and complying with the
         applicable license before using a track outside the ordinary playback
-        functions of the Service. References to third-party sources do not
-        imply sponsorship or endorsement.
+        functions of the Service. References to third-party sources do not imply
+        sponsorship or endorsement.
       </p>
 
-      <h2>6. Copyright and rights-holder requests</h2>
+      <h2>8. Copyright and rights-holder requests</h2>
       <p>
         We respect intellectual-property rights. If you believe content in the
         Service infringes or otherwise violates your rights, submit a detailed
@@ -105,27 +192,27 @@ export default function TermsPage() {
         investigate and may preserve related records as required by law.
       </p>
 
-      <h2>7. Ownership and feedback</h2>
+      <h2>9. Ownership and feedback</h2>
       <p>
         Except for third-party content, LofiRain LLC and its licensors own the
         Service, including its software, design, artwork, branding, and other
         materials. Our names, logos, and trade dress may not be used without
         prior written permission. If you voluntarily provide suggestions or
-        feedback, you grant us a perpetual, worldwide, royalty-free right to
-        use it without restriction or compensation, without identifying you.
+        feedback, you grant us a perpetual, worldwide, royalty-free right to use
+        it without restriction or compensation, without identifying you.
       </p>
 
-      <h2>8. Third-party services and connectivity</h2>
+      <h2>10. Third-party services and connectivity</h2>
       <p>
         The Service may depend on or link to Apple, hosting providers, music
         sources, network providers, or other third parties. Their terms and
         privacy practices govern their services. LofiRain LLC does not control
-        and is not responsible for third-party services. You are responsible
-        for devices, internet access, data charges, and compliance with
-        applicable third-party terms.
+        and is not responsible for third-party services. You are responsible for
+        devices, internet access, data charges, and compliance with applicable
+        third-party terms.
       </p>
 
-      <h2>9. Changes, availability, and termination</h2>
+      <h2>11. Changes, availability, and termination</h2>
       <p>
         We may add, remove, suspend, or discontinue features or content, issue
         updates, or stop supporting devices or operating-system versions. We do
@@ -137,7 +224,7 @@ export default function TermsPage() {
         disclaimers, liability limits, indemnity, and dispute provisions.
       </p>
 
-      <h2>10. No professional advice or guaranteed results</h2>
+      <h2>12. No professional advice or guaranteed results</h2>
       <p>
         Lofi Rain is an entertainment and productivity tool. It does not provide
         medical, mental-health, therapeutic, or other professional advice, and
@@ -146,7 +233,7 @@ export default function TermsPage() {
         where audio or distraction could create a safety risk.
       </p>
 
-      <h2>11. Disclaimers</h2>
+      <h2>13. Disclaimers</h2>
       <p>
         TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICE AND ALL CONTENT ARE
         PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT WARRANTIES OF ANY KIND,
@@ -154,16 +241,16 @@ export default function TermsPage() {
         WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE,
         NON-INFRINGEMENT, QUIET ENJOYMENT, AND WARRANTIES ARISING FROM COURSE OF
         DEALING OR USAGE OF TRADE. WE DO NOT WARRANT THAT THE SERVICE WILL BE
-        ACCURATE, COMPLETE, SECURE, UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL
-        COMPONENTS, OR THAT DEFECTS WILL BE CORRECTED.
+        ACCURATE, COMPLETE, SECURE, UNINTERRUPTED, ERROR-FREE, OR FREE OF
+        HARMFUL COMPONENTS, OR THAT DEFECTS WILL BE CORRECTED.
       </p>
       <p>
         Some jurisdictions do not allow certain warranty exclusions. In those
-        jurisdictions, the exclusions apply only to the extent permitted by
-        law, and you may have additional rights.
+        jurisdictions, the exclusions apply only to the extent permitted by law,
+        and you may have additional rights.
       </p>
 
-      <h2>12. Limitation of liability</h2>
+      <h2>14. Limitation of liability</h2>
       <p>
         TO THE MAXIMUM EXTENT PERMITTED BY LAW, LOFIRAIN LLC AND ITS MEMBERS,
         MANAGERS, EMPLOYEES, CONTRACTORS, LICENSORS, AND SERVICE PROVIDERS WILL
@@ -186,7 +273,7 @@ export default function TermsPage() {
         willful misconduct, or death or personal injury caused by negligence.
       </p>
 
-      <h2>13. Indemnity</h2>
+      <h2>15. Indemnity</h2>
       <p>
         To the extent permitted by law, you will defend, indemnify, and hold
         harmless LofiRain LLC and its members, managers, employees, contractors,
@@ -199,39 +286,38 @@ export default function TermsPage() {
         and you agree to reasonably cooperate.
       </p>
 
-      <h2>14. Disputes and governing law</h2>
+      <h2>16. Disputes and governing law</h2>
       <p>
         Before filing a claim, you and LofiRain LLC agree to make a good-faith
         effort for 30 days to resolve the dispute informally after written
         notice describing the claim and requested relief. This requirement does
-        not prevent either party from seeking urgent injunctive relief or
-        filing an eligible claim in small-claims court.
+        not prevent either party from seeking urgent injunctive relief or filing
+        an eligible claim in small-claims court.
       </p>
       <p>
-        These Terms are governed by the laws of the State of California,
-        without regard to conflict-of-laws rules. Unless applicable consumer
-        law gives you the right to bring a claim elsewhere, any judicial
-        proceeding must be brought in the state or federal courts located in
-        Los Angeles County, California, and each party consents to their
-        jurisdiction and venue. Nothing in these Terms limits non-waivable
-        rights or remedies available under applicable law.
+        These Terms are governed by the laws of the State of California, without
+        regard to conflict-of-laws rules. Unless applicable consumer law gives
+        you the right to bring a claim elsewhere, any judicial proceeding must
+        be brought in the state or federal courts located in Los Angeles County,
+        California, and each party consents to their jurisdiction and venue.
+        Nothing in these Terms limits non-waivable rights or remedies available
+        under applicable law.
       </p>
 
-      <h2>15. General terms</h2>
+      <h2>17. General terms</h2>
       <p>
-        These Terms, the Privacy Policy, and any terms expressly incorporated
-        by reference are the entire agreement concerning the Service. If a
+        These Terms, the Privacy Policy, and any terms expressly incorporated by
+        reference are the entire agreement concerning the Service. If a
         provision is unenforceable, it will be enforced to the maximum extent
         permitted and the remaining provisions will remain effective. Our
-        failure to enforce a provision is not a waiver. You may not assign
-        these Terms without our written consent; we may assign them in
-        connection with a merger, acquisition, reorganization, asset transfer,
-        or by operation of law. Headings are for convenience only. Neither
-        party is liable for delay or failure caused by events beyond its
-        reasonable control.
+        failure to enforce a provision is not a waiver. You may not assign these
+        Terms without our written consent; we may assign them in connection with
+        a merger, acquisition, reorganization, asset transfer, or by operation
+        of law. Headings are for convenience only. Neither party is liable for
+        delay or failure caused by events beyond its reasonable control.
       </p>
 
-      <h2>16. Changes to these Terms</h2>
+      <h2>18. Changes to these Terms</h2>
       <p>
         We may update these Terms to reflect changes to the Service, law, or our
         practices. We will post the updated Terms and revise the “Updated” date.
@@ -241,7 +327,7 @@ export default function TermsPage() {
         date constitutes acceptance where permitted by law.
       </p>
 
-      <h2>17. Contact</h2>
+      <h2>19. Contact</h2>
       <p>
         Questions, complaints, or legal notices concerning the Service or these
         Terms may be submitted through our <a href="/takedown">contact form</a>.
