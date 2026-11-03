@@ -1,6 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/mac/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+      {
+        source: "/downloads/mac/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+      {
+        source: "/downloads/mac/LofiRainMac.zip",
+        headers: [
+          { key: "Content-Type", value: "application/zip" },
+          {
+            key: "Content-Disposition",
+            value: 'attachment; filename="LofiRainMac.zip"',
+          },
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+    ];
+  },
   turbopack: {
     root: process.cwd(),
   },
