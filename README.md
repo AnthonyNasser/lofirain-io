@@ -46,5 +46,8 @@ authenticated page.
 To update it, replace `public/downloads/mac/LofiRainMac.zip` with the tested
 Release archive from the sibling app's `output/mac-build/LofiRainMac.zip`, update
 the displayed version if needed, and publish. The current archive contains the
-Apple silicon build for macOS 14+, version 1.6. It is development-signed and not
+Apple silicon build for macOS 14+, version 1.6.1. It is development-signed and not
 notarized; installation guidance is included on the page.
+
+Version 1.6.1 prefetches the next five queued songs and prepares the next player
+while music is playing, so cached song changes do not wait on a download.

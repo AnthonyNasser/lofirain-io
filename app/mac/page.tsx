@@ -50,7 +50,7 @@ export default function MacDownloadPage() {
             Download for Mac
           </a>
           <p className="mt-4 text-sm text-ink/65">
-            Apple silicon · macOS 14 or later · Version 1.6
+            Apple silicon · macOS 14 or later · Version 1.6.1
           </p>
           <div className="mt-10 w-full rounded-2xl border border-ink/10 bg-white/70 p-6 text-left sm:p-8">
             <h2 className="text-lg font-bold">Make yourself at home.</h2>
