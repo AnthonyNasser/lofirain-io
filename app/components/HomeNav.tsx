@@ -19,7 +19,7 @@ export default function HomeNav() {
     <nav className="site-nav" aria-label="Main">
       <Link href="/" className="wordmark">
         <Image src="/brand/lofi-rain-icon.png" alt="" width={34} height={34} />
-        Lofi Rain
+        LofiRain
       </Link>
 
       <div className="nav-links">

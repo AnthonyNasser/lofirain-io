@@ -4,7 +4,7 @@ import { LegalHomeLink } from "../legal";
 
 export const metadata: Metadata = {
   title: "Mac Preview",
-  description: "Download the Lofi Rain menu bar app for Mac.",
+  description: "Download the LofiRain menu bar app for Mac.",
   robots: { index: false, follow: false, noarchive: true },
 };
 
@@ -26,12 +26,16 @@ export default function MacDownloadPage() {
           </p>
           <h1 className="section-title mt-4">A little focus, on your Mac.</h1>
           <p className="lede mt-6">
-            Your cloud, lo-fi music, and simple focus sessions. Right in your menu
-            bar, with a small window whenever you need it.
+            Every cloud companion, every song, and simple focus sessions.
+            Included with LofiRain Premium, right in your menu bar.
+          </p>
+          <p className="mt-4 text-base text-ink/70">
+            Keep a companion beside you across desktops, and finish each timed
+            session with a quiet little celebration.
           </p>
           <a
-            href="/downloads/mac/LofiRainMac.zip"
-            download="LofiRainMac.zip"
+            href="/downloads/mac/lofirain-mac.zip"
+            download="lofirain-mac.zip"
             className="app-store-button mt-8 font-bold"
           >
             <svg
@@ -50,15 +54,21 @@ export default function MacDownloadPage() {
             Download for Mac
           </a>
           <p className="mt-4 text-sm text-ink/65">
-            Apple silicon · macOS 14 or later · Version 1.6.2
+            Apple silicon · macOS 14 or later · Version 1.7.0
           </p>
           <div className="mt-10 w-full rounded-2xl border border-ink/10 bg-white/70 p-6 text-left sm:p-8">
             <h2 className="text-lg font-bold">Make yourself at home.</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-base text-ink/75">
               <li>Open the downloaded ZIP.</li>
-              <li>Move LofiRainMac to your Applications folder, then open it.</li>
-              <li>Click the cloud in your menu bar to start a session.</li>
+              <li>Move lofirain to your Applications folder, then open it.</li>
+              <li>Sign in with the same LofiRain account you use on iPhone.</li>
+              <li>Choose a companion and start a session from the menu bar.</li>
             </ol>
+            <p className="mt-5 text-sm text-ink/75">
+              An active Premium subscription is required. On your updated iPhone
+              app, open Account settings and choose Link Premium for Mac. If you
+              use Sign in with Apple, set a password there for Mac sign-in.
+            </p>
             <p className="mt-6 border-t border-ink/10 pt-5 text-sm text-ink/65">
               This early preview is not notarized. If macOS blocks it, open System
               Settings → Privacy &amp; Security and choose Open Anyway.

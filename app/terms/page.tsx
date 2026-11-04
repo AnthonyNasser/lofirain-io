@@ -3,7 +3,7 @@ import { LegalPage } from "../legal";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of service for Lofi Rain.",
+  description: "Terms of service for LofiRain.",
 };
 
 export default function TermsPage() {
@@ -11,11 +11,11 @@ export default function TermsPage() {
     <LegalPage
       title="Terms of Service"
       updated="September 24, 2026"
-      intro="These Terms are a binding agreement between you and LofiRain LLC governing your use of the Lofi Rain app, lofirain.io, and related services."
+      intro="These Terms are a binding agreement between you and LofiRain LLC governing your use of the LofiRain app, lofirain.io, and related services."
     >
       <h2>1. Acceptance and eligibility</h2>
       <p>
-        By downloading, accessing, or using Lofi Rain (the “Service”), or by
+        By downloading, accessing, or using LofiRain (the “Service”), or by
         tapping a button in the app next to a notice that refers to these Terms,
         you agree to these Terms and acknowledge our{" "}
         <a href="/privacy">Privacy Policy</a>. If you do not agree, do not use
@@ -31,7 +31,7 @@ export default function TermsPage() {
 
       <h2>2. App Store terms</h2>
       <p>
-        If you obtain Lofi Rain through Apple’s App Store, Apple’s Licensed
+        If you obtain LofiRain through Apple’s App Store, Apple’s Licensed
         Application End User License Agreement (the “Standard EULA”) applies to
         your use of the app, and these Terms supplement it. If these Terms
         conflict with the Standard EULA or mandatory App Store usage rules, the
@@ -52,7 +52,8 @@ export default function TermsPage() {
 
       <h2>4. Accounts</h2>
       <p>
-        You can use Lofi Rain without an account. If you create one, you agree
+        The iPhone app can be used without an account. The Mac app requires a
+        LofiRain account and an active Premium subscription. If you create one, you agree
         to give accurate information, keep your sign-in credentials secure, and
         tell us through our <a href="/takedown">contact form</a> if you believe
         your account has been used without your permission. You are responsible
@@ -63,7 +64,7 @@ export default function TermsPage() {
 
       <h2>5. Premium subscriptions</h2>
       <p>
-        Lofi Rain Premium is an optional, auto-renewing subscription sold
+        LofiRain Premium is an optional, auto-renewing subscription sold
         through Apple’s App Store. Premium unlocks every companion, visualizer,
         and background in the app at once, including content that is only
         available with Premium, such as Purrple Cat. The core app remains usable
@@ -226,7 +227,7 @@ export default function TermsPage() {
 
       <h2>12. No professional advice or guaranteed results</h2>
       <p>
-        Lofi Rain is an entertainment and productivity tool. It does not provide
+        LofiRain is an entertainment and productivity tool. It does not provide
         medical, mental-health, therapeutic, or other professional advice, and
         it is not an emergency service. We do not guarantee focus, sleep,
         relaxation, productivity, or any other outcome. Do not use the Service

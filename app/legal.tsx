@@ -12,7 +12,7 @@ export function LegalHomeLink() {
   return (
     <Link href="/" className="wordmark">
       <Image src="/brand/lofi-rain-icon.png" alt="" width={30} height={30} />
-      Lofi Rain
+      LofiRain
     </Link>
   );
 }

@@ -80,7 +80,7 @@ const bands: Band[] = [
     room: "Purrple’s Playlist",
     title: "Find your focus.",
     body: "A starry-eyed dreamer curled up with mellow lofi, hand-picked from the Purrple Cat catalog. Planets orbit while the timer runs.",
-    unlock: "Purrple Cat comes with Lofi Rain Premium.",
+    unlock: "Purrple Cat comes with LofiRain Premium.",
     screen: "/screens/purrple.webp",
     screenAlt:
       "Purrple Cat holding a star, playing Sky Lake from Purrple’s Playlist",
@@ -216,7 +216,7 @@ export default function Home() {
               Sit longer, unlock more.
             </h2>
             <p className="lede">
-              Lofi Rain counts your streak, your sessions, and your minutes.
+              LofiRain counts your streak, your sessions, and your minutes.
               Staying with it is how you open new clouds and new skies.
             </p>
             <p

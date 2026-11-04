@@ -11,8 +11,8 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   title: {
-    default: "Lofi Rain",
-    template: "%s | Lofi Rain",
+    default: "LofiRain",
+    template: "%s | LofiRain",
   },
   description:
     "Lofi music with a cloud for company. Pick a companion, add rain, set a timer, and focus.",

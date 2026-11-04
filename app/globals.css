@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Lofi Rain: pale companion skies around dark app screens.
+ * LofiRain: pale companion skies around dark app screens.
  * Each companion band sets its own --tint-top / --tint / --deep.
  */
 :root {

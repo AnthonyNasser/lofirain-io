@@ -3,7 +3,7 @@ import { LegalPage } from "../legal";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for Lofi Rain.",
+  description: "Privacy policy for LofiRain.",
 };
 
 export default function PrivacyPage() {
@@ -11,12 +11,12 @@ export default function PrivacyPage() {
     <LegalPage
       title="Privacy Policy"
       updated="September 24, 2026"
-      intro="This Privacy Policy explains how LofiRain LLC collects, uses, discloses, and retains information when you use the Lofi Rain app, lofirain.io, or contact us."
+      intro="This Privacy Policy explains how LofiRain LLC collects, uses, discloses, and retains information when you use the LofiRain app, lofirain.io, or contact us."
     >
       <h2>1. Scope and responsible company</h2>
       <p>
         LofiRain LLC (“LofiRain,” “we,” “us,” or “our”) is responsible for the
-        practices described in this Policy. This Policy applies to the Lofi Rain
+        practices described in this Policy. This Policy applies to the LofiRain
         mobile application, lofirain.io, and requests you submit to us
         (collectively, the “Service”). It does not govern third-party services
         that have their own privacy policies, including Apple and websites
@@ -79,7 +79,9 @@ export default function PrivacyPage() {
           which plan you chose, whether a purchase or restore was started,
           completed, cancelled, or failed, and whether Premium is active. We do
           not receive your name, Apple Account password, billing address, or
-          payment-card details from Apple.
+          payment-card details from Apple. For Mac access, we store verified
+          subscription transaction identifiers, expiry and revocation status
+          linked to your LofiRain account.
         </li>
         <li>
           <strong>Reminders.</strong> If you turn on reminders, the app
@@ -96,7 +98,8 @@ export default function PrivacyPage() {
         </li>
       </ul>
       <p>
-        You can use Lofi Rain without an account. We do not intentionally
+        The iPhone app can be used without an account. The Mac app requires a
+        LofiRain account and an active Premium subscription. We do not intentionally
         collect precise location, contacts, photos, microphone recordings,
         health data, biometric data, government identifiers, or
         financial-account details through the current version of the Service.

@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function TakedownPage() {
   return (
     <LegalPage
-      title="Contact Lofi Rain"
+      title="Contact LofiRain"
       updated="June 27, 2026"
-      intro="Send a privacy or legal inquiry, or request review or removal of a song from Lofi Rain."
+      intro="Send a privacy or legal inquiry, or request review or removal of a song from LofiRain."
     >
       <p>
         Select the type of inquiry below. For a rights-holder request, include

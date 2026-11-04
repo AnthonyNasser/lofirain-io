@@ -6,7 +6,7 @@ import { retiredTracks, tracks, type MusicCredit } from "./tracks";
 export const metadata: Metadata = {
   title: "Music credits",
   description:
-    "Artist attribution, Creative Commons licenses, and original source pages for the licensed music in Lofi Rain.",
+    "Artist attribution, Creative Commons licenses, and original source pages for the licensed music in LofiRain.",
   alternates: { canonical: "https://lofirain.io/music-credits" },
 };
 
@@ -19,9 +19,9 @@ export default function MusicCredits() {
         <header className="mt-14 border-b border-ink/15 pb-8">
           <h1 className="section-title">Music credits</h1>
           <p className="lede mt-5">
-            Purrple Cat’s playlist in Lofi Rain is Creative Commons music. Each
+            Purrple Cat’s playlist in LofiRain is Creative Commons music. Each
             track below lists its credited artist, license, and original source
-            page. The other clouds play original music made for Lofi Rain.
+            page. The other clouds play original music made for LofiRain.
           </p>
           <p className="legal-meta mt-4">{tracks.length} tracks</p>
         </header>
@@ -33,7 +33,7 @@ export default function MusicCredits() {
             id="retired-title"
             className="text-2xl font-extrabold tracking-tight"
           >
-            Previously in Lofi Rain
+            Previously in LofiRain
           </h2>
           <p className="mt-3 max-w-2xl text-ink/70">
             These tracks were in earlier versions of the app.
