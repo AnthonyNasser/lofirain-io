@@ -54,21 +54,24 @@ export default function MacDownloadPage() {
             Download for Mac
           </a>
           <p className="mt-4 text-sm text-ink/65">
-            Apple silicon · macOS 14 or later · Version 1.7.1
+            Apple silicon · macOS 14 or later · Version 1.7.3
+          </p>
+          <p className="mt-3 text-sm text-ink/75">
+            The preview is available to download. Sign in with Apple is still
+            being set up, so you can’t start a session yet.
           </p>
           <div className="mt-10 w-full rounded-2xl border border-ink/10 bg-white/70 p-6 text-left sm:p-8">
             <h2 className="text-lg font-bold">Make yourself at home.</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-base text-ink/75">
               <li>Open the downloaded ZIP.</li>
               <li>Move lofirain to your Applications folder, then open it.</li>
-              <li>Sign in with the same LofiRain account you use on iPhone.</li>
+              <li>When sign-in is available, choose Sign in with Apple.</li>
               <li>Choose a companion and start a session from the menu bar.</li>
             </ol>
             <p className="mt-5 text-sm text-ink/75">
-              An active Premium subscription is required. This preview is
-              available to download while account access is being prepared.
-              An upcoming iPhone update will let you link Premium for Mac in
-              Account settings and set a password if you use Sign in with Apple.
+              An active Premium subscription is required. Use the same Apple
+              Account you use for LofiRain. The updated iPhone app is needed
+              to link an existing Premium subscription for Mac.
             </p>
             <p className="mt-6 border-t border-ink/10 pt-5 text-sm text-ink/65">
               This early preview is not notarized. If macOS blocks it, open System
