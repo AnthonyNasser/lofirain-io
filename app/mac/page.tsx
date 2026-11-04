@@ -54,7 +54,7 @@ export default function MacDownloadPage() {
             Download for Mac
           </a>
           <p className="mt-4 text-sm text-ink/65">
-            Apple silicon · macOS 14 or later · Version 1.7.0
+            Apple silicon · macOS 14 or later · Version 1.7.1
           </p>
           <div className="mt-10 w-full rounded-2xl border border-ink/10 bg-white/70 p-6 text-left sm:p-8">
             <h2 className="text-lg font-bold">Make yourself at home.</h2>
@@ -65,9 +65,10 @@ export default function MacDownloadPage() {
               <li>Choose a companion and start a session from the menu bar.</li>
             </ol>
             <p className="mt-5 text-sm text-ink/75">
-              An active Premium subscription is required. On your updated iPhone
-              app, open Account settings and choose Link Premium for Mac. If you
-              use Sign in with Apple, set a password there for Mac sign-in.
+              An active Premium subscription is required. This preview is
+              available to download while account access is being prepared.
+              An upcoming iPhone update will let you link Premium for Mac in
+              Account settings and set a password if you use Sign in with Apple.
             </p>
             <p className="mt-6 border-t border-ink/10 pt-5 text-sm text-ink/65">
               This early preview is not notarized. If macOS blocks it, open System

@@ -46,7 +46,7 @@ authenticated page.
 To update it, replace `public/downloads/mac/lofirain-mac.zip` with the tested
 Release archive from the sibling app's `output/mac-build/lofirain-mac.zip`, update
 the displayed version if needed, and publish. The current archive contains the
-Apple silicon build for macOS 14+, version 1.7.0. It is development-signed and not
+Apple silicon build for macOS 14+, version 1.7.1. It is development-signed and not
 notarized; installation guidance is included on the page.
 
 Version 1.6.1 prefetches the next five queued songs and prepares the next player
@@ -63,5 +63,23 @@ activate Mac access. Older download URLs redirect to the current ZIP.
 It opens directly under its menu bar icon, preserves ambient loops between songs,
 refreshes all ten ambient recordings, and adds an optional desktop companion.
 Timed sessions end with a chime, companion celebration and Take a break / Keep
-listening actions. Mac verification: 44 passing tests; iPhone Simulator and Mac
+listening actions. Mac verification: 46 passing tests; iPhone Simulator and Mac
 Release builds pass. See the sibling app MAC_APP.md for account release dependencies.
+
+## Mac sign-in verification
+
+The native app opens `/mac/verify` only when Supabase asks for CAPTCHA.
+Configure `LOFIRAIN_CAPTCHA_PROVIDER` (`turnstile` by default, or `hcaptcha`) and
+`LOFIRAIN_CAPTCHA_SITE_KEY` (the **public** widget key) for this deployment.
+Allow `www.lofirain.io` in the provider's widget domains. The matching provider
+secret stays in Supabase. The website receives no email or password; its
+single-use CAPTCHA token is handed to the native app, which submits credentials
+directly to Supabase. No tokens appear in a URL or local storage.
+
+Production currently rejects password login with `captcha_failed`; the Turnstile public
+widget key is not available in the checkout. The verification page
+reports unavailable until those required values are supplied. Do not describe
+password login as production-verified before the real challenge is completed.
+
+Version 1.7.1 adds native CAPTCHA handoff for password authentication; widget
+configuration is a required activation step and has not been supplied yet.
