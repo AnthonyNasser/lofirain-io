@@ -56,16 +56,12 @@ export default function MacDownloadPage() {
           <p className="mt-4 text-sm text-ink/65">
             Apple silicon · macOS 14 or later · Version 1.7.3
           </p>
-          <p className="mt-3 text-sm text-ink/75">
-            The preview is available to download. Sign in with Apple is still
-            being set up, so you can’t start a session yet.
-          </p>
           <div className="mt-10 w-full rounded-2xl border border-ink/10 bg-white/70 p-6 text-left sm:p-8">
             <h2 className="text-lg font-bold">Make yourself at home.</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-base text-ink/75">
               <li>Open the downloaded ZIP.</li>
               <li>Move lofirain to your Applications folder, then open it.</li>
-              <li>When sign-in is available, choose Sign in with Apple.</li>
+              <li>Choose Sign in with Apple.</li>
               <li>Choose a companion and start a session from the menu bar.</li>
             </ol>
             <p className="mt-5 text-sm text-ink/75">
